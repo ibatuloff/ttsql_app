@@ -2,41 +2,27 @@
 
 <head>
 	<title>Handling of http get and post request</title>
-	<style>
+	<!-- <style>
 		div {
 			width: 400px;
 			border: 1px solid green;
 			padding: 10px;
 			margin-bottom: 5px;
 		}
-	</style>
+    
+	</style> -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='stylesheets/styles.css') }}">
 </head>
 
 <body>
-
-	<div>
-<!-- url_for will route the forms request to 
-appropriate function that user made to handle it.-->
-<!--we will Retrieve submitted values of inputs 
-on the backend side using 'name' field of form.-->
-		<h1>Handle GET Request</h1>
-		<form method="GET"
-        action="/get">
-			<input type="text"
-				name="text"
-				placeholder="Text">
+	<form method="POST">
+		<div id="prompt">
+			<label for="prompt">Your prompt:</label>
+			<input id="prompt" name="text"></input>
+		</div>
+		<div class="button">
 			<button type="submit">submit</button>
-		</form>
-	</div>
-
-	<div>
-		<h1>Handle POST Request</h1>
-		<form method="POST">
-			<input type="text"
-				name="text"
-				placeholder="Text">
-			<button type="submit">submit</button>
-		</form>
-	</div>
+		</div>
+	</form>
 </body>
 
